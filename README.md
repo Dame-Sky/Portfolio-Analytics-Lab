@@ -1,7 +1,5 @@
 # 📊About Portfolio-Lab — Portfolio Analytics Dashboard
 
-**"This project's source code is private. Please use this public repository only to report issues and track progress."**
-
 ## Overview
 
 **Portfolio-Lab** is a web-based portfolio analytics application built with **Streamlit**.  
@@ -164,7 +162,8 @@ portfolio-analytics-dashboard/
 ├── returns_engine.py
 ├── risk_engine.py
 ├── sector_engine.py
-└── valuation_engine.py
+├── valuation_engine.py
+└── simulation_engine.py
 ```
 
 ---
@@ -207,3 +206,7 @@ This project is not positioned as a finished financial product.
 
 Portfolio-Lab is an experiment in learning, architecture, and applied finance.
 
+## Additional Documentation
+
+📘 User Guide → \docs\howtouse.md  
+🧠 Technical Docs → \docs\documentation.md
