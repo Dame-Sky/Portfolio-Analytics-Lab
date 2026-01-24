@@ -221,3 +221,4 @@ Portfolio-Lab is an experiment in learning, architecture, and applied finance.
 * 🙋‍♂️ **Have a question?** Join our [GitHub Discussions](https://github.com/Dame-Sky/Portfolio-Analytics-Lab/discussions)
 * 💡 **Have an idea?** Submit a [Feature Request](https://github.com/Dame-Sky/Portfolio-Analytics-Lab/issues/new?template=feature_request.md)
 * 🗺️ **See what's coming next:** View our [Project Roadmap](https://github.com/users/Dame-Sky/projects/1)
+* 🛠️ **Track our progress:** See what bugs we're squashing in the [Issues Management Board](https://github.com/users/Dame-Sky/projects/2).
