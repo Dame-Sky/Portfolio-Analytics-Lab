@@ -202,8 +202,10 @@ Then open the provided local URL in your browser.
 
 This project is not positioned as a finished financial product.
 
-## Security
+## 🛡️ Security & Privacy
 Reference data is stored in an AES-256 encrypted volume and decrypted in-memory during session initialization to ensure data integrity. 
+We take data privacy seriously. **Portfolio-Lab does not persist user data.** * All uploaded transactions are processed in-memory and destroyed when the session ends.
+* Technical details on our encryption and data handling can be found in our [Security & Privacy Documentation](docs/security.md).
 
 **It is an evolving collaboration between human design, financial theory, and artificial intelligence — built to explore how portfolio intelligence tools can be constructed, validated, and eventually democratized.**
 
