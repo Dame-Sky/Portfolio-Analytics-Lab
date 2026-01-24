@@ -1,5 +1,5 @@
 # 📊About Portfolio-Lab — Portfolio Analytics Dashboard
-
+<video src="![Image](https://github.com/user-attachments/assets/8ab8eae8-ca18-412f-9960-232f3ce1aa82)" width="100%" controls></video>
 ## Overview
 
 **Portfolio-Lab** is a web-based portfolio analytics application built with **Streamlit**.  
