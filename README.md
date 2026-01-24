@@ -202,6 +202,9 @@ Then open the provided local URL in your browser.
 
 This project is not positioned as a finished financial product.
 
+## Security
+Reference data is stored in an AES-256 encrypted volume and decrypted in-memory during session initialization to ensure data integrity. 
+
 **It is an evolving collaboration between human design, financial theory, and artificial intelligence — built to explore how portfolio intelligence tools can be constructed, validated, and eventually democratized.**
 
 Portfolio-Lab is an experiment in learning, architecture, and applied finance.
