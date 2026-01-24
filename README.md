@@ -213,5 +213,5 @@ Portfolio-Lab is an experiment in learning, architecture, and applied finance.
 
 ## Additional Documentation
 
-📘 User Guide → \docs\howtouse.md  
-🧠 Technical Docs → \docs\documentation.md
+📘 [User Guide](\docs\howtouse.md)  
+🧠 [Technical Docs](\docs\documentation.md)
