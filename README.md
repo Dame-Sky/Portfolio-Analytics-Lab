@@ -2,7 +2,7 @@
 ![Portfolio Lab Demo](https://github.com/user-attachments/assets/8ab8eae8-ca18-412f-9960-232f3ce1aa82)
 ## Overview
 
-**Portfolio-Lab** is a web-based portfolio analytics application built with **Streamlit**.  [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat&logo=github)](https://github.com/Dame-Sky/Portfolio-Analytics-Lab)
+**Portfolio-Lab** is a web-based portfolio analytics application built with **Streamlit**.
 
 It is designed to help investors reconstruct, evaluate, and understand their portfolios through a professional-grade performance and risk analytics pipeline.
 
