@@ -188,7 +188,6 @@ portfolio-analytics-dashboard/
 │ ├──  app_screenshots/
 │ ├── documentation.md
 │ ├── howtouse.md
-│ ├── howtoreadmarketexposure.md
 │ ├── glossaryofterms.md
 │ └── security.md
 └──
