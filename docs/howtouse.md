@@ -4,10 +4,11 @@ Welcome to **Portfolio Analytics Lab**, a portfolio analytics dashboard designed
 
 This guide explains:
 
-• How to enter transactions manually  
-• How to bulk upload transaction data  
-• How Portfolio Lab interprets your data  
-• Common mistakes to avoid  
+- How to enter transactions manually  
+- How to bulk upload transaction data  
+- How Portfolio Lab interprets your data
+- How to read performance, risk, and exposure diagnostics  
+- Common mistakes to avoid  
 
 ---
 
@@ -18,14 +19,7 @@ This guide explains:
 Navigate to:
 👉 Transactions (sidebar)
 
-Choose one:
-• Manual single-entry input
-• Bulk upload via formatted file
-
-### ✍️ Option 1 — Manual Transaction Entry
-Use the ➕ Add Transaction form.
-
-Each row represents one financial event in your portfolio.
+Each row represents one financial event in your portfolio. Next we will explain which inputs are required from you.
 
 | Field | Description |
 | :--- | :--- |
@@ -42,6 +36,12 @@ Each row represents one financial event in your portfolio.
 | **FX to JMD** | Conversion rate at transaction date |
 | **Notes** | Optional description |
 
+Choose one:
+• Manual single-entry input
+• Bulk upload via formatted file
+
+### ✍️ Option 1 — Manual Transaction Entry
+Use the ➕ Add Transaction form.
 
 Select the transaction type to get access to the appropriate form layout. To assist you, we have restricted specific fields to only those needed based on your transaction type.
 
@@ -61,7 +61,7 @@ Select the transaction type to get access to the appropriate form layout. To ass
 | **TAX** | Taxes | Trade Date, Currency, Fees, FX Rate, Amount
 
 ### 📂 Option 2 — Bulk Upload
-we have prepared for your an Excel file template where each row will represent a transaction. We tried again to simplify for you the required inputs. Just below the Ledger Management Section, you will find a "Template" button. It will furnish you with a blank file with the minimum columns required for the **Portfolio Analytics Lab**.
+We have prepared for your an Excel file template where each row will represent a transaction. We tried again to simplify for you the required inputs. Just below the Ledger Management Section, you will find a "Template" button. It will furnish you with a blank file with the minimum columns required for the **Portfolio Analytics Lab**.
 
 ✅ Required Columns
 Your file must contain the following columns:
@@ -85,22 +85,82 @@ Your file must contain the following columns:
 • FX_to_JMD must be supplied for non-JMD trades
 • If an Instrument codes does not exist in the reference table such as a recent IPO, it will not be evaluated until its data is uploaded. 
 
-### 🧠 How the app uses your data
-Your transaction history is used to:
+### 🧠 How Portfolio Lab Uses Your Data
 
-✔ Reconstruct holdings over time
-✔ Generate valuation snapshots
-✔ Compute time-weighted returns
-✔ Separate external cash flows
-✔ Perform attribution analysis
-✔ Drive portfolio risk models
+Your transactions drive a deterministic pipeline:
+
+✔ Holdings reconstruction
+✔ Historical valuation
+✔ Time-weighted and money-weighted returns
+✔ Performance attribution
+✔ Risk modeling
+✔ Market exposure diagnostics
+
+If results look wrong, the cause is always upstream in the data.
+
+📊 Navigating the App Pages
+📂 Holdings
+
+Verify:
+• quantities
+• cost basis
+• market value
+
+This page confirms your portfolio was reconstructed correctly.
+
+📈 Performance & Attribution
+
+View:
+• TWRR / MWRR
+• Asset and sector attribution
+• Allocation vs selection effects
+
+This explains where returns came from.
+
+⚖️ Risk
+
+Analyze:
+• volatility
+• diversification
+• VaR (95% / 99%)
+• risk contribution
+
+This explains how risk is distributed.
+
+🌍 Market Exposure
+
+This page answers:
+
+“What market forces does my portfolio actually respond to?”
+
+You will see:
+• Regression against market indices
+• FX sensitivity
+• Alpha and beta estimates
+• Statistical diagnostics (R², p-values, residual tests)
+
+⚠️ Important interpretation notes
+• Low R² is common and expected in real portfolios
+• Exposure ≠ prediction
+• Results are diagnostic, not advice
+
+This page is designed to help you reason about behavior, not forecast returns.
 
 ### 🧪 Best Practice
 • Enter transactions chronologically
-• Always record cash deposits before trades
-• Avoid mixing cash flows into BUY/SELL cash fields
-• Keep FX rates consistent
-• Verify holdings in the Holdings page
+• Record cash deposits before trades
+• Keep FX consistent
+• Validate holdings before analyzing performance
+• Use Market Exposure as a diagnostic, not a scorecard
+
+🧩 Example of cash movement like FUNDSIN transaction 
+```bash
+Trade_Date: 2025-01-26  
+Transaction_Type: FUNDSIN  
+Cash_Amount: 100000  
+Currency: JMD  
+FX_to_JMD: 1  
+```
 
 🧩 Example BUY transaction
 ```bash
@@ -145,24 +205,16 @@ Price: 0.10
 Currency: JMD  
 FX_to_JMD: 1  
 ```
-🧩 Example of cash movement like FUNDSIN transaction 
-```bash
-Trade_Date: 2025-01-26  
-Transaction_Type: FUNDSIN  
-Cash_Amount: 100000  
-Currency: JMD  
-FX_to_JMD: 1  
-```
 
-📈 After entering data
-Proceed to:
+### 📌 Final Note
 
-• Holdings → verify positions
-• Performance → view returns & attribution
-• Risk → analyze diversification & VaR
+Portfolio Analytics Lab is deterministic.
 
-If something looks wrong, it usually traces back to:
-• missing FX
-• misclassified cash flows
+If:
+• transactions are correct
+• FX is correct
+• classifications are correct
 
-Portfolio Lab is deterministic: correct data = correct analytics.
+Then the analytics are correct.
+
+This platform is designed to help you understand portfolios as systems, not just collections of tickers.
