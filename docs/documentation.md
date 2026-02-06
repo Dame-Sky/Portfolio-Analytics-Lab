@@ -17,7 +17,9 @@ Each engine performs a single institutional-grade responsibility:
 | **returns_engine** | Computes portfolio returns |
 | **sector_engine** | Sector grouping & attribution |
 | **attribution_engine** | Performance attribution |
-| **risk_engine** | Risk and decomposition analytics | 
+| **risk_engine** | Risk and decomposition analytics |
+| **exposure_engine** |	Market, FX, and factor exposure diagnostics |
+| **ui_components** |	Shared presentation & diagnostics primitives |
 
 The Streamlit UI only orchestrates these engines.
 
@@ -39,6 +41,8 @@ Attribution Engine
 Risk Engine
     ↓
 Simulation Engine
+    ↓
+Market Exposure Engine
 ```
 Each layer consumes the previous layer’s output.
 
@@ -153,7 +157,83 @@ Typical outputs:
 • MVaR, CVaR
 • Risk attribution tables
 
-🗄️ Reference Data Layer
+# 🌍 exposure_engine.py
+
+Responsible for market and factor exposure diagnostics.
+
+This engine evaluates how portfolio excess returns relate to external drivers, without asserting causality or predictive power.
+
+Core responsibilities
+
+• Construct portfolio excess return series
+• Align market index excess returns
+• Incorporate FX and macro proxies
+• Run OLS-based exposure regressions
+• Compute statistical diagnostics
+• Reconcile regression output with attribution math
+
+Typical factors
+
+• Market index excess return
+• FX return (USD/JMD)
+• Interest rate proxies
+• Optional alternative indices
+
+Outputs
+
+• Beta coefficients
+• Alpha (intercept)
+• R-squared and adjusted R-squared
+• t-stats and p-values
+• Durbin–Watson statistic
+• Condition number
+• Residual diagnostics
+
+This engine answers:
+
+“What risks am I implicitly taking, and does the data support that?”
+
+It is diagnostic, not a factor model factory.
+
+# 🧩 ui_components.py
+
+Responsible for shared UI construction and analytical presentation.
+
+Core responsibilities
+
+• Standardized tables
+• Metric cards
+• Regression summaries
+• Diagnostic panels
+• Attribution and exposure visual scaffolding
+
+This module ensures:
+• consistent presentation
+• separation of UI and financial logic
+• reusability across pages
+
+No financial calculations occur in this layer.
+
+# 🖥️ 5_Market_Exposure.py
+
+Streamlit orchestration layer for exposure diagnostics.
+
+Responsibilities
+
+• Assemble cleaned excess return datasets
+• Invoke exposure_engine
+• Display regression results and diagnostics
+• Present exposure coefficients and attribution reconciliation
+• Surface model integrity warnings
+
+This page intentionally:
+• avoids optimization
+• avoids forecasting
+• avoids black-box factor abstractions
+
+It exists to help users interpret portfolio behavior in market context.
+
+# 🗄️ Reference Data Layer
 All market data is:
 
 • Precompiled
@@ -182,9 +262,9 @@ The app avoids “black-box” finance.
 
 Every metric is built from:
 
-Transactions → Positions → Valuations → Returns → Attribution → Risk
+Transactions → Positions → Valuations → Returns → Attribution → Risk → Market Exposure
 
-🧩 Why this structure matters
+# 🧩 Why this structure matters
 This engine-based design allows:
 
 • easy testing
@@ -205,10 +285,17 @@ This makes Portfolio Lab suitable for:
 • research
 • analytics tooling
 • performance reporting
+• emerging-market factor exploration
 
-📌 Final note
+# 📌 Final note
 Portfolio Lab is not a trading app.
+It is not an optimizer.
+It is not a forecasting engine.
 
 It is a portfolio intelligence system.
-It reconstructs the full economic history of a portfolio and exposes it mathematically.
+
+It reconstructs the full economic history of a portfolio and then asks:
+
+“What does the math say about how this portfolio actually behaves?”
+
 That distinction is what allows professional-grade analytics to exist on top of it.
