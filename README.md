@@ -30,7 +30,8 @@ Rather than emphasizing trading, the app is centered on:
 - understanding portfolio construction  
 - measuring performance correctly  
 - identifying sources of return (alpha)  
-- evaluating portfolio risk and diversification  
+- evaluating portfolio risk and diversification
+- diagnosing exposure to market, currency, and structural factors  
 - building financial intuition through structure  
 
 This project treats portfolios not as tickers, but as evolving financial systems.
@@ -89,6 +90,17 @@ Designed to evaluate **where** returns came from — not only how much.
 
 Built to explore **how portfolio structure influences risk**.
 
+### 🌍 Market Exposure & Factor Diagnostics
+
+- Excess return regression against market indices
+- FX sensitivity analysis (USD/JMD)
+- Index-relative beta estimation
+- Portfolio alpha diagnostics
+- Statistical significance testing (t-stats, p-values)
+- Model integrity checks (R², Durbin–Watson, condition number)
+- Residual analysis and attribution reconciliation
+
+This module is designed to explore why a portfolio behaves the way it does relative to the market, not to optimize or predict returns.
 ---
 
 
@@ -102,12 +114,15 @@ Portfolio-Lab is structured as a set of independent but connected financial engi
 - sector_engine.py → sector aggregation & attribution
 - attribution_engine.py → BF / BHB performance attribution
 - risk_engine.py → risk & VaR analytics
+- exposure_engine.py → market, FX, and factor exposure modeling
+- ui_components.py → shared UI primitives, tables, charts, and diagnostics
 
 The Streamlit app orchestrates these engines into interactive workflows:
 1. 1_Transactions.py
 2. 2_Holdings.py
 3. 3_Performance_Attribution.py
 4. 4_Risk_Attribution.py
+5. 5_Market_Exposure.py
 
 This modular structure allows each financial problem domain to remain isolated, testable, and extensible.
 
@@ -122,7 +137,8 @@ It reconstructs portfolios from raw transactions and evaluates them across:
 - valuation  
 - performance  
 - attribution  
-- and risk  
+- risk  
+- and market exposure
 
 using academically grounded and industry-standard models.
 
@@ -138,7 +154,8 @@ This project addresses several technically and conceptually complex domains:
 - cash-flow-neutral performance measurement  
 - benchmark-relative attribution modeling  
 - historical valuation pipelines  
-- and decomposed portfolio risk  
+- decomposed portfolio risk
+- and market exposure  
 
 Each engine required aligning financial theory, accounting identities, and software design into a consistent system.
 
@@ -155,7 +172,8 @@ portfolio-analytics-dashboard/
 │ ├── 1_Transactions.py
 │ ├── 2_Holdings.py
 │ ├── 3_Performance_Attribution.py
-│ └── 4_Risk_Attribution.py
+│ ├── 4_Risk_Attribution.py
+│ └── 5_Market_Exposure.py
 │
 ├── attribution_engine.py
 ├── holdings_engine.py
@@ -163,7 +181,17 @@ portfolio-analytics-dashboard/
 ├── risk_engine.py
 ├── sector_engine.py
 ├── valuation_engine.py
-└── simulation_engine.py
+├── exposure_engine.py
+├── simulation_engine.py
+├── ui_components.py
+├──  docs/
+│ ├──  app_screenshots/
+│ ├── documentation.md
+│ ├── howtouse.md
+│ ├── howtoreadmarketexposure.md
+│ ├── glossaryofterms.md
+│ └── security.md
+└──
 ```
 
 ---
@@ -212,6 +240,7 @@ We take data privacy seriously. **Portfolio-Lab does not persist user data.** * 
 Portfolio-Lab is an experiment in learning, architecture, and applied finance.
 
 ## Additional Documentation
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat&logo=github)](https://github.com/Dame-Sky/Portfolio-Analytics-Lab)
 
 📘 [User Guide](\docs\howtouse.md)  
 🧠 [Technical Docs](\docs\documentation.md)
@@ -221,4 +250,4 @@ Portfolio-Lab is an experiment in learning, architecture, and applied finance.
 * 🙋‍♂️ **Have a question?** Join our [GitHub Discussions](https://github.com/Dame-Sky/Portfolio-Analytics-Lab/discussions)
 * 💡 **Have an idea?** Submit a [Feature Request](https://github.com/Dame-Sky/Portfolio-Analytics-Lab/issues/new?template=feature_request.md)
 * 🗺️ **See what's coming next:** View our [Project Roadmap](https://github.com/users/Dame-Sky/projects/1)
-* 🛠️ **Track our progress:** See what bugs we're squashing in the [Issues Management Board](https://github.com/users/Dame-Sky/projects/2).
+* 🛠️ **Track our progress:** See what bugs we're squashing in the [Issues Management Board](https://github.com/users/Dame-Sky/projects/2)
