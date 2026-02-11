@@ -17,7 +17,7 @@ At this stage, Portfolio-Lab does **not persist user data** and is intended as a
 
 ---
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://portfolio-analytics-lab.streamlit.app)
+
 
 ## Purpose
 
@@ -195,17 +195,15 @@ portfolio-analytics-dashboard/
 
 ---
 
-## Installation
+## Access
 
-1. Clone the repository  
-2. Install dependencies  
-3. Run the Streamlit app  
+This application is deployed via Streamlit Cloud and is not distributed as open-source software.
 
-```bash
-streamlit run app.py
-```
+Authorized users can access the live dashboard here:
 
-Then open the provided local URL in your browser.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://portfolio-analytics-lab.streamlit.app)
+
+No local installation is required.
 
 ---
 
