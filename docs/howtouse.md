@@ -89,11 +89,11 @@ Your file must contain the following columns:
 
 Your transactions drive a deterministic pipeline:
 
-✔ Holdings reconstruction
-✔ Historical valuation
-✔ Time-weighted and money-weighted returns
-✔ Performance attribution
-✔ Risk modeling
+✔ Holdings reconstruction\
+✔ Historical valuation\
+✔ Time-weighted and money-weighted returns\
+✔ Performance attribution\
+✔ Risk modeling\
 ✔ Market exposure diagnostics
 
 If results look wrong, the cause is always upstream in the data.
