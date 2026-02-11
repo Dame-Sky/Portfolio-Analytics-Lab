@@ -98,12 +98,12 @@ Your transactions drive a deterministic pipeline:
 
 If results look wrong, the cause is always upstream in the data.
 
-📊 Navigating the App Pages
+📊 Navigating the App Pages\
 📂 Holdings
 
 Verify:
-• quantities
-• cost basis
+• quantities\
+• cost basis\
 • market value
 
 This page confirms your portfolio was reconstructed correctly.
@@ -111,8 +111,8 @@ This page confirms your portfolio was reconstructed correctly.
 📈 Performance & Attribution
 
 View:
-• TWRR / MWRR
-• Asset and sector attribution
+• TWRR / MWRR\
+• Asset and sector attribution\
 • Allocation vs selection effects
 
 This explains where returns came from.
@@ -120,9 +120,9 @@ This explains where returns came from.
 ⚖️ Risk
 
 Analyze:
-• volatility
-• diversification
-• VaR (95% / 99%)
+• volatility\
+• diversification\
+• VaR (95% / 99%)\
 • risk contribution
 
 This explains how risk is distributed.
@@ -133,24 +133,24 @@ This page answers:
 
 “What market forces does my portfolio actually respond to?”
 
-You will see:
-• Regression against market indices
-• FX sensitivity
-• Alpha and beta estimates
+You will see:\
+• Regression against market indices\
+• FX sensitivity\
+• Alpha and beta estimates\
 • Statistical diagnostics (R², p-values, residual tests)
 
-⚠️ Important interpretation notes
-• Low R² is common and expected in real portfolios
-• Exposure ≠ prediction
+⚠️ Important interpretation notes\
+• Low R² is common and expected in real portfolios\
+• Exposure ≠ prediction\
 • Results are diagnostic, not advice
 
 This page is designed to help you reason about behavior, not forecast returns.
 
-### 🧪 Best Practice
-• Enter transactions chronologically
-• Record cash deposits before trades
-• Keep FX consistent
-• Validate holdings before analyzing performance
+### 🧪 Best Practice\
+• Enter transactions chronologically\
+• Record cash deposits before trades\
+• Keep FX consistent\
+• Validate holdings before analyzing performance\
 • Use Market Exposure as a diagnostic, not a scorecard
 
 🧩 Example of cash movement like FUNDSIN transaction 
@@ -210,10 +210,10 @@ FX_to_JMD: 1
 
 Portfolio Analytics Lab is deterministic.
 
-If:
-• transactions are correct
-• FX is correct
-• classifications are correct
+If:\
+• transactions are correct\
+• FX is correct\
+• classifications are correct\
 
 Then the analytics are correct.
 
