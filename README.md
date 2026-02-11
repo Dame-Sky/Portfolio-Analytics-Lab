@@ -51,7 +51,7 @@ This project treats portfolios not as tickers, but as evolving financial systems
 - Multi-currency normalization into JMD  
 - Historical valuation snapshots  
 
----
+
 
 ### 📈 Performance Engine
 
@@ -60,9 +60,6 @@ This project treats portfolios not as tickers, but as evolving financial systems
 - Money-Weighted Rate of Return (MWRR / IRR)  
 - CFA-aligned TWRR logic (non-annualized sub-year periods)  
 - Portfolio valuation history builder  
-
----
-
 
 ### 🧮 Attribution Engine
 
@@ -73,10 +70,6 @@ This project treats portfolios not as tickers, but as evolving financial systems
 - Allocation, selection, and interaction effects  
 
 Designed to evaluate **where** returns came from — not only how much.
-
-
----
-
 
 ### ⚖️ Risk Lab
 
@@ -100,8 +93,7 @@ Built to explore **how portfolio structure influences risk**.
 - Model integrity checks (R², Durbin–Watson, condition number)
 - Residual analysis and attribution reconciliation
 
-This module is designed to explore why a portfolio behaves the way it does relative to the market, not to optimize or predict returns.
----
+**This module is designed to explore why a portfolio behaves the way it does relative to the market, not to optimize or predict returns.**
 
 
 ## Architectural Design
@@ -126,8 +118,6 @@ The Streamlit app orchestrates these engines into interactive workflows:
 
 This modular structure allows each financial problem domain to remain isolated, testable, and extensible.
 
----
-
 ## Distinctiveness
 
 Portfolio-Lab differs from typical “portfolio trackers” in that it is built as a **multi-engine financial infrastructure** rather than a dashboard wrapper.
@@ -143,8 +133,6 @@ It reconstructs portfolios from raw transactions and evaluates them across:
 using academically grounded and industry-standard models.
 
 The emphasis is not on visualizing prices, but on **explaining portfolio behavior.**
-
----
 
 ## Complexity Statement
 
@@ -211,8 +199,6 @@ No local installation is required.
 The mathematical framework underlying this system is documented in the `/docs` directory.
 
 Source code is private, but the computational methodology is fully documented for academic transparency.
-
-
 
 ## Current Limitations
 
