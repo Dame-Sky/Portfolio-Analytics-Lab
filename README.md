@@ -205,7 +205,6 @@ Authorized users can access the live dashboard here:
 
 No local installation is required.
 
----
 
 ## Reproducibility
 
@@ -213,7 +212,7 @@ The mathematical framework underlying this system is documented in the `/docs` d
 
 Source code is private, but the computational methodology is fully documented for academic transparency.
 
----
+
 
 ## Current Limitations
 
