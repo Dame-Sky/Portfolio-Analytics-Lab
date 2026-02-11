@@ -207,6 +207,14 @@ No local installation is required.
 
 ---
 
+## Reproducibility
+
+The mathematical framework underlying this system is documented in the `/docs` directory.
+
+Source code is private, but the computational methodology is fully documented for academic transparency.
+
+---
+
 ## Current Limitations
 
 - No user authentication
