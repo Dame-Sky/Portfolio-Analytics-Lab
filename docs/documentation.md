@@ -104,12 +104,12 @@ Produces institutional-grade sub-period returns:
 
 Date | Start_Value | External_Flow | End_Value | Period_Return\
 compute_twrr(...)\
-Geometrically links sub-periods:\
+Geometrically links sub-periods:
 
 TWRR = Π (1 + r_t) - 1\
 This removes cash flow distortion.
 
-# 🧭 sector_engine.py\
+# 🧭 sector_engine.py
 Responsible for sector mapping and attribution scaffolding.
 
 Core responsibilities:\
