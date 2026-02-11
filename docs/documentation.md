@@ -287,7 +287,7 @@ This makes Portfolio Lab suitable for:\
 • performance reporting\
 • emerging-market factor exploration
 
-# 📌 Final note\
+# 📌 Final note
 Portfolio Lab is not a trading app.\
 It is not an optimizer.\
 It is not a forecasting engine.\
