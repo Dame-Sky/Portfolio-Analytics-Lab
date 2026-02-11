@@ -184,13 +184,13 @@ portfolio-analytics-dashboard/
 ├── exposure_engine.py
 ├── simulation_engine.py
 ├── ui_components.py
-├──  docs/
-│ ├──  app_screenshots/
-│ ├── documentation.md
-│ ├── howtouse.md
-│ ├── glossaryofterms.md
-│ └── security.md
-└──
+└──  docs/
+ ├──  app_screenshots/
+ ├── documentation.md
+ ├── howtouse.md
+ ├── glossaryofterms.md
+ └── security.md
+
 ```
 
 ---
