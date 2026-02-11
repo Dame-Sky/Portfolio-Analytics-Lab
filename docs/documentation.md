@@ -68,7 +68,7 @@ Builds time series of holdings.
 
 Used by valuation and performance engines.
 
-# 💰 valuation_engine.py\
+# 💰 valuation_engine.py
 Responsible for market valuation.
 
 Core responsibilities:\
@@ -290,7 +290,7 @@ This makes Portfolio Lab suitable for:\
 # 📌 Final note
 Portfolio Lab is not a trading app.\
 It is not an optimizer.\
-It is not a forecasting engine.\
+It is not a forecasting engine.
 
 It is a portfolio intelligence system.
 
