@@ -47,7 +47,7 @@ This ensures attribution results reconcile to observed valuation changes.
 ### 3.1 Portfolio Sector Weights
 
 For sector i:\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$𝑊_{𝑝,𝑖}=\frac{𝑀𝑉_{𝑖,0}}{\sum_{𝑗=1}𝑀𝑉_{𝑗,0}}$$
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$𝑊_{𝑝,𝑖}=\frac{𝑀𝑉_{𝑖,0}}{\sum^N_{𝑗=1}𝑀𝑉_{𝑗,0}}$$
 
 where:\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${𝑀𝑉_{𝑖,0}}$ = sector market value at ${t_0}$
