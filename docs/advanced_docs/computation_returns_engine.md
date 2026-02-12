@@ -60,7 +60,7 @@ For periods $( t \ge 2 )$, the period return isolates market movement by **remov
 
 ### Core Equation
 
-$$R_t = \frac{V_t - F_t}{D_t} - 1$
+$R_t = \frac{V_t - F_t}{D_t} - 1$
 
 Where the denominator $( D_t )$ depends on the **timing logic of flows**.
 
