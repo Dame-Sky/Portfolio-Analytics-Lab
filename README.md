@@ -1,8 +1,8 @@
 # 📊About Portfolio-Lab — Portfolio Analytics Dashboard
-![Portfolio Lab Demo](https://github.com/user-attachments/assets/8ab8eae8-ca18-412f-9960-232f3ce1aa82)
+
 ## Overview
 
-**Portfolio-Lab** is a web-based portfolio analytics application built with **Streamlit**.
+**Portfolio-Lab** is a web-based portfolio analytics application built with **Streamlit**. [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat&logo=github)](https://github.com/Dame-Sky/Portfolio-Analytics-Lab)  
 
 It is designed to help investors reconstruct, evaluate, and understand their portfolios through a professional-grade performance and risk analytics pipeline.
 
@@ -51,7 +51,7 @@ This project treats portfolios not as tickers, but as evolving financial systems
 - Multi-currency normalization into JMD  
 - Historical valuation snapshots  
 
-
+---
 
 ### 📈 Performance Engine
 
@@ -60,6 +60,9 @@ This project treats portfolios not as tickers, but as evolving financial systems
 - Money-Weighted Rate of Return (MWRR / IRR)  
 - CFA-aligned TWRR logic (non-annualized sub-year periods)  
 - Portfolio valuation history builder  
+
+---
+
 
 ### 🧮 Attribution Engine
 
@@ -70,6 +73,10 @@ This project treats portfolios not as tickers, but as evolving financial systems
 - Allocation, selection, and interaction effects  
 
 Designed to evaluate **where** returns came from — not only how much.
+
+
+---
+
 
 ### ⚖️ Risk Lab
 
@@ -93,7 +100,8 @@ Built to explore **how portfolio structure influences risk**.
 - Model integrity checks (R², Durbin–Watson, condition number)
 - Residual analysis and attribution reconciliation
 
-**This module is designed to explore why a portfolio behaves the way it does relative to the market, not to optimize or predict returns.**
+This module is designed to explore why a portfolio behaves the way it does relative to the market, not to optimize or predict returns.
+---
 
 
 ## Architectural Design
@@ -118,6 +126,8 @@ The Streamlit app orchestrates these engines into interactive workflows:
 
 This modular structure allows each financial problem domain to remain isolated, testable, and extensible.
 
+---
+
 ## Distinctiveness
 
 Portfolio-Lab differs from typical “portfolio trackers” in that it is built as a **multi-engine financial infrastructure** rather than a dashboard wrapper.
@@ -133,6 +143,8 @@ It reconstructs portfolios from raw transactions and evaluates them across:
 using academically grounded and industry-standard models.
 
 The emphasis is not on visualizing prices, but on **explaining portfolio behavior.**
+
+---
 
 ## Complexity Statement
 
@@ -172,13 +184,14 @@ portfolio-analytics-dashboard/
 ├── exposure_engine.py
 ├── simulation_engine.py
 ├── ui_components.py
-└──  docs/
- ├──  app_screenshots/
- ├── documentation.md
- ├── howtouse.md
- ├── glossaryofterms.md
- └── security.md
-
+├──  docs/
+│ ├──  app_screenshots/
+│ ├── documentation.md
+│ ├── howtouse.md
+│ ├── howtoreadmarketexposure.md
+│ ├── glossaryofterms.md
+│ └── security.md
+└──
 ```
 
 ---
@@ -193,12 +206,15 @@ Authorized users can access the live dashboard here:
 
 No local installation is required.
 
+---
 
 ## Reproducibility
 
 The mathematical framework underlying this system is documented in the `/docs` directory.
 
 Source code is private, but the computational methodology is fully documented for academic transparency.
+
+---
 
 ## Current Limitations
 
@@ -207,6 +223,10 @@ Source code is private, but the computational methodology is fully documented fo
 - Manual transaction input only
 - JSE equity focus
 - Not intended for live trading or investment advice
+- Brinson Attribution Sensitivity:
+        The Brinson-Fachler (BF) and Brinson-Hood-Beebower (BHB) models in this lab assume fixed beginning-of-period weights.
+
+        Note: Large intra-period capital flows (buys/sells) can distort attribution results. If significant trading occurs mid-period, the attribution effects may not fully reconcile with the Portfolio's total return.
 - Portfolio-Lab is currently an analytics sandbox and research platform.
 
 ## Out-of-Scope (Planned)
