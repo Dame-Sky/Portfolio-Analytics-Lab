@@ -79,31 +79,32 @@ Your file must contain the following columns:
 | **Notes** | Optional descriptive text for personal recollection. |
 
 ## ⚠️ Important Rules
-• You do not need to be concerned with positive or negative signage, the engine were built to deduce and auto-signed transactions
-• Cash movements like FUNDSIN, FUNDSOUT, FEES, INTEREST, and TAX go in Cash Amount 
-• Trades transactions like BUY, SELL, DIVIDEND, CAPITAL RETURN, SPLIT require Quantity × Price. Do NOT use Cash Amount!
-• FX_to_JMD must be supplied for non-JMD trades
-• If an Instrument codes does not exist in the reference table such as a recent IPO, it will not be evaluated until its data is uploaded. 
+- You do not need to be concerned with positive or negative signage, the engine were built to deduce and auto-signed transactions
+- Cash movements like FUNDSIN, FUNDSOUT, FEES, INTEREST, and TAX go in Cash Amount 
+- Trades transactions like BUY, SELL, DIVIDEND, CAPITAL RETURN, SPLIT require Quantity × Price. Do NOT use Cash Amount!
+- FX_to_JMD must be supplied for non-JMD trades
+- If an Instrument codes does not exist in the reference table such as a recent IPO, it will not be evaluated until its data is uploaded.
+- Capital Flows & Attribution: Brinson attribution assumes beginning-of-period weights. While the engine handles intra-period buys/sells for Performance (MWRR/TWRR), large mid-period trades can distort Attribution results. For the most accurate attribution diagnostics, analyze periods with lower capital turnover. 
 
 ### 🧠 How Portfolio Lab Uses Your Data
 
 Your transactions drive a deterministic pipeline:
 
-✔ Holdings reconstruction\
-✔ Historical valuation\
-✔ Time-weighted and money-weighted returns\
-✔ Performance attribution\
-✔ Risk modeling\
+✔ Holdings reconstruction
+✔ Historical valuation
+✔ Time-weighted and money-weighted returns
+✔ Performance attribution
+✔ Risk modeling
 ✔ Market exposure diagnostics
 
 If results look wrong, the cause is always upstream in the data.
 
-📊 Navigating the App Pages\
+📊 Navigating the App Pages
 📂 Holdings
 
 Verify:
-• quantities\
-• cost basis\
+• quantities
+• cost basis
 • market value
 
 This page confirms your portfolio was reconstructed correctly.
@@ -111,18 +112,24 @@ This page confirms your portfolio was reconstructed correctly.
 📈 Performance & Attribution
 
 View:
-• TWRR / MWRR\
-• Asset and sector attribution\
-• Allocation vs selection effects
+- TWRR / MWRR
+- Asset and sector attribution
+- Allocation vs selection effects
+
+Verify:
+
+- TWRR / MWRR: Ensure cash flows (FUNDSIN/OUT) are recorded before the trades they funded to avoid "negative cash" return spikes.
+
+- Attribution Reconciliation: If Selection and Allocation effects do not perfectly sum to your Total Excess Return, check for large mid-period capital injections which violate the Brinson fixed-weight assumption.
 
 This explains where returns came from.
 
 ⚖️ Risk
 
 Analyze:
-• volatility\
-• diversification\
-• VaR (95% / 99%)\
+• volatility
+• diversification
+• VaR (95% / 99%)
 • risk contribution
 
 This explains how risk is distributed.
@@ -133,24 +140,24 @@ This page answers:
 
 “What market forces does my portfolio actually respond to?”
 
-You will see:\
-• Regression against market indices\
-• FX sensitivity\
-• Alpha and beta estimates\
+You will see:
+• Regression against market indices
+• FX sensitivity
+• Alpha and beta estimates
 • Statistical diagnostics (R², p-values, residual tests)
 
-⚠️ Important interpretation notes\
-• Low R² is common and expected in real portfolios\
-• Exposure ≠ prediction\
+⚠️ Important interpretation notes
+• Low R² is common and expected in real portfolios
+• Exposure ≠ prediction
 • Results are diagnostic, not advice
 
 This page is designed to help you reason about behavior, not forecast returns.
 
-### 🧪 Best Practice\
-• Enter transactions chronologically\
-• Record cash deposits before trades\
-• Keep FX consistent\
-• Validate holdings before analyzing performance\
+### 🧪 Best Practice
+• Enter transactions chronologically
+• Record cash deposits before trades
+• Keep FX consistent
+• Validate holdings before analyzing performance
 • Use Market Exposure as a diagnostic, not a scorecard
 
 🧩 Example of cash movement like FUNDSIN transaction 
@@ -210,10 +217,10 @@ FX_to_JMD: 1
 
 Portfolio Analytics Lab is deterministic.
 
-If:\
-• transactions are correct\
-• FX is correct\
-• classifications are correct\
+If:
+• transactions are correct
+• FX is correct
+• classifications are correct
 
 Then the analytics are correct.
 
